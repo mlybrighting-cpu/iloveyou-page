@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>I LOVE YOU</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            min-height: 100vh;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            overflow: hidden;
+        }
+        
+        .container {
+            text-align: center;
+            padding: 20px;
+            position: relative;
+            z-index: 10;
+        }
+        
+        .heart {
+            font-size: 120px;
+            animation: heartbeat 1.5s ease-in-out infinite;
+            display: inline-block;
+            margin-bottom: 20px;
+        }
+        
+        @keyframes heartbeat {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.2); }
+        }
+        
+        .text {
+            color: white;
+            font-size: 48px;
+            font-weight: bold;
+            letter-spacing: 8px;
+            text-shadow: 2px 2px 10px rgba(0,0,0,0.3);
+            margin-bottom: 30px;
+        }
+        
+        .subtitle {
+            color: rgba(255,255,255,0.9);
+            font-size: 18px;
+            margin-top: 20px;
+        }
+        
+        .floating-hearts {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            overflow: hidden;
+            z-index: 1;
+        }
+        
+        .floating-heart {
+            position: absolute;
+            color: rgba(255,255,255,0.6);
+            font-size: 20px;
+            animation: float 6s ease-in infinite;
+        }
+        
+        @keyframes float {
+            0% {
+                transform: translateY(100vh) rotate(0deg);
+                opacity: 1;
+            }
+            100% {
+                transform: translateY(-100px) rotate(360deg);
+                opacity: 0;
+            }
+        }
+        
+        .btn {
+            display: inline-block;
+            margin-top: 40px;
+            padding: 15px 40px;
+            background: white;
+            color: #764ba2;
+            border-radius: 50px;
+            text-decoration: none;
+            font-size: 18px;
+            font-weight: bold;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+            transition: all 0.3s ease;
+        }
+        
+        .btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 40px rgba(0,0,0,0.3);
+        }
+        
+        /* 生成不同位置的浮动心 */
+        .floating-heart:nth-child(1) { left: 10%; animation-delay: 0s; }
+        .floating-heart:nth-child(2) { left: 20%; animation-delay: 1s; }
+        .floating-heart:nth-child(3) { left: 30%; animation-delay: 2s; }
+        .floating-heart:nth-child(4) { left: 40%; animation-delay: 0.5s; }
+        .floating-heart:nth-child(5) { left: 50%; animation-delay: 1.5s; }
+        .floating-heart:nth-child(6) { left: 60%; animation-delay: 2.5s; }
+        .floating-heart:nth-child(7) { left: 70%; animation-delay: 0.8s; }
+        .floating-heart:nth-child(8) { left: 80%; animation-delay: 1.8s; }
+        .floating-heart:nth-child(9) { left: 90%; animation-delay: 3s; }
+        .floating-heart:nth-child(10) { left: 5%; animation-delay: 2.2s; }
+        .floating-heart:nth-child(11) { left: 15%; animation-delay: 3.5s; }
+        .floating-heart:nth-child(12) { left: 25%; animation-delay: 4s; }
+        .floating-heart:nth-child(13) { left: 35%; animation-delay: 1.2s; }
+        .floating-heart:nth-child(14) { left: 45%; animation-delay: 2.8s; }
+        .floating-heart:nth-child(15) { left: 55%; animation-delay: 3.8s; }
+        .floating-heart:nth-child(16) { left: 65%; animation-delay: 4.5s; }
+        .floating-heart:nth-child(17) { left: 75%; animation-delay: 0.3s; }
+        .floating-heart:nth-child(18) { left: 85%; animation-delay: 5s; }
+        .floating-heart:nth-child(19) { left: 95%; animation-delay: 1.8s; }
+        .floating-heart:nth-child(20) { left: 50%; animation-delay: 2.8s; }
+    </style>
+</head>
+<body>
+    <div class="floating-hearts">
+        <span class="floating-heart">💕</span>
+        <span class="floating-heart">💖</span>
+        <span class="floating-heart">💗</span>
+        <span class="floating-heart">💓</span>
+        <span class="floating-heart">💝</span>
+        <span class="floating-heart">💕</span>
+        <span class="floating-heart">💖</span>
+        <span class="floating-heart">💗</span>
+        <span class="floating-heart">💓</span>
+        <span class="floating-heart">💝</span>
+        <span class="floating-heart">💕</span>
+        <span class="floating-heart">💖</span>
+        <span class="floating-heart">💗</span>
+        <span class="floating-heart">💓</span>
+        <span class="floating-heart">💝</span>
+        <span class="floating-heart">💕</span>
+        <span class="floating-heart">💖</span>
+        <span class="floating-heart">💗</span>
+        <span class="floating-heart">💓</span>
+        <span class="floating-heart">💝</span>
+    </div>
+    
+    <div class="container">
+        <div class="heart">❤️</div>
+        <h1 class="text">I LOVE YOU</h1>
+        <p class="subtitle">愿每一天都充满爱与温暖</p>
+    </div>
+    
+    <script>
+        // 点击屏幕产生爱心
+        document.addEventListener('click', function(e) {
+            const heart = document.createElement('div');
+            heart.innerHTML = '❤️';
+            heart.style.position = 'fixed';
+            heart.style.left = e.clientX + 'px';
+            heart.style.top = e.clientY + 'px';
+            heart.style.fontSize = '30px';
+            heart.style.pointerEvents = 'none';
+            heart.style.animation = 'float 3s ease-out forwards';
+            heart.style.zIndex = '100';
+            document.body.appendChild(heart);
+            
+            setTimeout(() => heart.remove(), 3000);
+        });
+        
+        // 自动播放背景音乐（可选）
+        // const audio = new Audio('https://...');
+        // audio.loop = true;
+        // audio.play().catch(e => console.log('音频自动播放被阻止'));
+    </script>
+</body>
+</html>
